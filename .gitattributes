@@ -1,0 +1,25 @@
+# 本仓库是字体项目，不是网站。
+#
+# GitHub Linguist 按扩展名统计源文件字节数来判定「主要语言」，而它默认不认
+# .otf / .woff2 / .ttf 这类字体二进制 —— 于是唯一被数到的就是落地页的
+# html/css/js，标签显示成 HTML 或 CSS，与项目实质不符。
+#
+# 修正分两步：
+#   一、站点文件标为 documentation，Linguist 不再把它们计入语言统计；
+#   二、字体文件显式登记为 OpenType，让语言标签反映项目实质。
+#
+# ⚠️ 这里**不能**再写 `*.otf binary`：binary 属性会把文件整个排除出语言统计，
+#    把上面的 OpenType 登记吃掉，结果徽章变成空白。字体本身是二进制，
+#    Linguist 自己认得出来，不需要手工标。
+#
+# ⚠️ `*.html` 必须用通配：works/ 与 jieqi/ 下还有页面，只写 index.html 会漏。
+
+*.html            linguist-documentation
+*.css             linguist-documentation
+*.js              linguist-documentation
+
+*.otf             linguist-language=OpenType
+*.woff2           linguist-language=OpenType
+
+# 压缩产物不进 diff
+*.zip             binary
