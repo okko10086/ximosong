@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>戏墨宋 SC · 一款只收紧中宫、不削横画的宋体</title>
+<meta name="description" content="戏墨宋 SC —— 基于思源宋体改造的宋体，四字重 + 水墨标题体两字重，20992 个基本区汉字，支持竖排，SIL OFL 1.1 免费商用。">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" href="fonts/ximosong-heavy.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ximosong-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="img/seal.png">
+</head>
+<body>
+
+<!-- ═══════════ 卷首 ═══════════ -->
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <span class="tag">XI MO SONG SC<span class="dot">·</span>2026</span>
+      <span class="vnote">紧中宫<span class="dot">·</span>饱字面<span class="dot">·</span>不削横</span>
+    </div>
+
+    <h1 class="hero-title">戏墨宋</h1>
+
+    <p class="hero-lede">
+      一款只收紧中宫、不削横画的宋体。<br>
+      由思源宋体改造：<em>四个字重</em>，覆盖 <em>20,992</em> 个基本区汉字，另含水墨标题体。
+    </p>
+
+    <ul class="hero-meta">
+      <li><b>SIL OFL 1.1</b><span>免费商用</span></li>
+      <li><b>4</b><span>字重</span></li>
+      <li><b>30930</b><span>cmap 字符</span></li>
+      <li><b>竖排</b><span>vhea / vmtx</span></li>
+    </ul>
+
+    <img class="seal" src="img/seal.png" alt="戏墨 印" width="88" height="88">
+    <div class="scroll-hint" aria-hidden="true"><i></i>向下展开</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════ 卷一 · 它是什么 ═══════════ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="vol">卷一</span>
+      <h2>它是什么</h2>
+      <span class="en">WHAT IT IS</span>
+    </div>
+
+    <div class="two">
+      <div class="col prose">
+        <p>思源宋体的轮廓早已合并——一个「十」字只有一条闭合轮廓，横竖笔画焊成一体，
+          因此无法按单条笔画加粗减细。戏墨宋的全部改造，通过<em>全局坐标变形</em>完成。</p>
+        <p>汉字设计的核心杠杆是中宫。思源宋体同样带日文字体基因，中宫偏松。
+          戏墨宋把它收紧、把字面放大——<em>中宫更紧、字面更饱满</em>是它唯一的识别特征。</p>
+        <p class="quiet">与黑体姊妹款的区别在于<em>少一个旋钮</em>：戏墨黑加笔画对比（横细竖粗），
+          戏墨宋<em>不加</em>。原因见卷四——宋体的横画只有 33 单位厚，没有余量可削。</p>
+      </div>
+
+      <div class="col">
+        <figure class="fig">
+          <img src="img/spec-compare.png" alt="思源宋体与戏墨宋的字面实测对比">
+          <figcaption>同一字号下「国」字的墨迹范围实测对比。框线由程序按 alpha&gt;64 量出，不是目测。</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="spec-row">
+      <div class="spec">
+        <span class="num">0.09</span>
+        <span class="lab">中宫收紧 k</span>
+        <p>局部缩放率建模，笔画只渐变变细，绝不增粗。</p>
+      </div>
+      <div class="spec">
+        <span class="num">+3.4<span class="pc">%</span></span>
+        <span class="lab">墨迹面积变化</span>
+        <p>「国」字实测：字面放大，比源字体更饱满。</p>
+      </div>
+      <div class="spec">
+        <span class="num">1.055</span>
+        <span class="lab">横向缩放 sx</span>
+        <p>与 sy=1.045 配合，保持宋体方正偏扁的本性。</p>
+      </div>
+      <div class="spec">
+        <span class="num">186324</span>
+        <span class="lab">全量校验字形</span>
+        <p>六个字重逐字形绘制并重编译，零失败。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 卷二 · 四个字重 ═══════════ -->
+<section class="sec sec-alt" id="weights">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="vol">卷二</span>
+      <h2>四个字重</h2>
+      <span class="en">FOUR WEIGHTS</span>
+    </div>
+
+    <div class="controls">
+      <label class="ctl">
+        <span>字号 <b id="sizeOut">64</b> px</span>
+        <input id="sizeRange" type="range" min="28" max="132" value="64" step="2">
+      </label>
+      <p class="hint">拖动滑块看字面在不同字号下的表现。下面这四行是真正的字体文件，不是图片。</p>
+    </div>
+
+    <div class="weights" id="weightsBox">
+      <div class="wrow" data-w="400"><span class="wlab">Regular<i>400</i></span><p style="font-weight:400">戏墨宋 一蓑烟雨任平生</p></div>
+      <div class="wrow" data-w="500"><span class="wlab">Medium<i>500</i></span><p style="font-weight:500">戏墨宋 一蓑烟雨任平生</p></div>
+      <div class="wrow" data-w="600"><span class="wlab">SemiBold<i>600</i></span><p style="font-weight:600">戏墨宋 一蓑烟雨任平生</p></div>
+      <div class="wrow" data-w="900"><span class="wlab">Heavy<i>900</i></span><p style="font-weight:900">戏墨宋 一蓑烟雨任平生</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 卷三 · 水墨标题体 ═══════════ -->
+<section class="sec ink-sec" id="ink">
+  <div class="ink-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head light">
+      <span class="vol">卷三</span>
+      <h2>水墨标题体</h2>
+      <span class="en">INK DISPLAY</span>
+    </div>
+
+    <div class="ink-demo">
+      <p class="ink-line w600">墨未干</p>
+      <p class="ink-line w900">纸上生烟</p>
+      <p class="ink-note">Xi Mo Song Ink SC · 重 / 浓 两个字重</p>
+    </div>
+
+    <figure class="fig fig-ink">
+      <img src="img/ink-composite.jpg" alt="水墨两层合成：字形层提供不规则边缘，纹理层提供深浅渍痕">
+      <figcaption>两层叠起来才是完整的水墨：字形层给<em>不规则的边缘</em>，
+        纹理层（正片叠底）给<em>深浅与晕染</em>。字始终是实心墨——纹理只做浓淡，绝不把字洗灰。</figcaption>
+    </figure>
+
+    <div class="two tight">
+      <div class="col prose light">
+        <p>水墨位移需要足够大的笔画才承受得住。宋体的横画只有 33 单位，
+          振幅必须<em>由横画而非竖画决定</em>——所以宋体水墨比黑体水墨<em>收敛一档</em>。</p>
+        <p>逐点局部厚度限幅让粗的竖画仍可接受较大位移，细横画自动受保护。
+          再加逐字形检测：一旦轮廓翻转就降强度重试。</p>
+        <p class="quiet">这是刻意的取舍。再往上加振幅，横画会被水渍啃断，
+          字形散架——那就不是水墨，是残字。</p>
+      </div>
+      <div class="col">
+        <div class="note-card">
+          <h3>字体只能编码形状，不能编码色调</h3>
+          <p>水渍那圈深浅不匀的渍痕，是墨水浓度在纸纤维上干燥后的渐变——属于栅格信息。
+            OpenType 的轮廓里没有灰阶。</p>
+          <p>所以完整的水墨效果需要两层：字形层提供<em>不规则的边缘</em>，
+            纹理层（PNG，正片叠底）提供<em>深浅与晕染</em>。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 卷四 · 为什么宋体不加笔画对比 ═══════════ -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="vol">卷四</span>
+      <h2>为什么宋体不加笔画对比</h2>
+      <span class="en">WHY NO CONTRAST</span>
+    </div>
+
+    <div class="two">
+      <div class="col prose">
+        <p>戏墨黑用了两个旋钮：<b>中宫收紧</b>加<b>方向性笔画对比</b>。
+          黑体是等线，横竖一样粗，加对比是纯增益。</p>
+        <p>宋体不行。宋体本就靠横细竖粗立骨，横画已经被传统削到很薄——
+          <em>没有余量再削第二次</em>。</p>
+        <p>实测：思源宋体 Regular 的「一」字，横画本体只有 <b>33 单位</b>厚，
+          而两端三角衬线把它撑到 114 单位高。作为对照，思源黑体的「一」字整条就是笔画，
+          <b>160 单位</b>。</p>
+        <p class="quiet">黑体横画削掉三成还剩 112；宋体横画削三成只剩 23 ——
+          在大字号下就是一根发丝，印刷上直接断线。</p>
+      </div>
+
+      <div class="col">
+        <figure class="fig">
+          <img src="img/stroke-measure.png" alt="宋体与黑体「一」字横画厚度实测对比">
+          <figcaption>横画本体厚度实测。按 1000 upem 折算，取字形竖直中央列扫描墨迹连续段。</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="two tight" style="margin-top:2.4rem">
+      <div class="col">
+        <div class="note-card">
+          <h3>曾经做错过</h3>
+          <p>实验台里保留了这个反面候选：<code>宋_加对比_错</code>。
+            给它接上笔画对比后，横画被削成发丝，字面结构直接塌掉。</p>
+          <p class="quiet">这条记录留在源码里，是为了让后来的人不必再试一次。</p>
+        </div>
+      </div>
+      <div class="col prose">
+        <p>所以戏墨宋只有一件事可做：<b>中宫收紧 + 字面调整</b>。
+          两个旋钮共用黑体那套变形引擎，只是不接第三个。</p>
+        <p>这也让它与戏墨黑构成一对<em>方法相同、取舍不同</em>的姊妹字体。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 卷五 · 竖排 ═══════════ -->
+<section class="sec sec-alt" id="vertical">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="vol">卷五</span>
+      <h2>竖排</h2>
+      <span class="en">VERTICAL SETTING</span>
+    </div>
+
+    <div class="vert-wrap">
+      <div class="vert-demo">
+        <p class="v-title">竹杖芒鞋轻胜马</p>
+        <p class="v-body">定风波 · 苏轼</p>
+        <p class="v-body">莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</p>
+      </div>
+      <aside class="vert-side">
+        <p>完整保留 <code>vhea</code> / <code>vmtx</code> 竖排度量，以及 <code>GPOS</code> /
+          <code>GSUB</code> 高级排版表。网页里用 <code>writing-mode: vertical-rl</code> 即可。</p>
+        <p class="quiet">上面这段是真实渲染的竖排文本，不是图片。</p>
+        <p class="quiet">宋体在竖排下比黑体更贴合——传统书籍正文本来就以宋体竖排为主。</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 卷六 · 试写 ═══════════ -->
+<section class="sec" id="try">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="vol">卷六</span>
+      <h2>试写</h2>
+      <span class="en">TYPE TESTER</span>
+    </div>
+
+    <div class="try-bar">
+      <input id="tryInput" type="text" value="戏墨宋 免费商用 四字重" aria-label="试写内容" maxlength="40">
+      <div class="try-ctl">
+        <div class="seg" id="tryWeights" role="group" aria-label="字重">
+          <button data-w="400" class="on">标</button><button data-w="500">中</button><button data-w="600">半</button><button data-w="900">特</button>
+        </div>
+        <button class="seg-toggle" id="tryDir" aria-pressed="false">竖排</button>
+        <label class="ctl inline"><span>字号 <b id="trySizeOut">96</b></span>
+          <input id="trySize" type="range" min="40" max="200" value="96" step="2"></label>
+      </div>
+    </div>
+
+    <div class="try-stage" id="tryStage">
+      <p class="try-text" id="tryText">戏墨宋 免费商用 四字重</p>
+    </div>
+
+    <p class="hint" id="tryHint">正在按需载入 GB2312 完整字库（约 2.5 MB）——载入前显示的是页面子集。</p>
+  </div>
+</section>
+
+<!-- ═══════════ 卷七 · 规格与授权 ═══════════ -->
+<section class="sec sec-alt" id="spec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="vol">卷七</span>
+      <h2>规格与授权</h2>
+      <span class="en">SPECS &amp; LICENSE</span>
+    </div>
+
+    <div class="two">
+      <div class="col">
+        <table class="spec-table">
+          <caption>字体文件</caption>
+          <tbody>
+            <tr><th>字形总数</th><td>31,058 / 字重</td></tr>
+            <tr><th>cmap 字符</th><td>30,930</td></tr>
+            <tr><th>基本区汉字</th><td>20,992（含扩展 A 区）</td></tr>
+            <tr><th>拉丁 / 注音 / 假名 / 谚文</th><td>全套</td></tr>
+            <tr><th>桌面格式</th><td>OTF（CFF），约 11.4 MB / 字重</td></tr>
+            <tr><th>网页格式</th><td>WOFF2，GB2312 子集 7,690 字符，约 2.5 MB</td></tr>
+            <tr><th>竖排</th><td>vhea / vmtx 完整保留</td></tr>
+            <tr><th>授权</th><td>SIL Open Font License 1.1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col">
+        <div class="license">
+          <h3>你可以 / 不可以</h3>
+          <ul class="yes">
+            <li>免费用于任何场景，<b>包括商业用途</b></li>
+            <li>自由分发、嵌入、修改</li>
+            <li>修改后分发（衍生字体须同样以 OFL 发布并改名）</li>
+          </ul>
+          <ul class="no">
+            <li>单独售卖字体文件本身</li>
+            <li>在衍生字体中使用保留字体名</li>
+            <li>以 Adobe 名义做宣传背书</li>
+          </ul>
+          <p class="quiet">保留字体名：<code>Xi Mo Song</code> · <code>Xi Mo Song SC</code> ·
+            <code>戏墨宋</code> · <code>戏墨宋 SC</code>，以及各自的 Ink 变体名。</p>
+        </div>
+
+        <div class="dl">
+          <a class="btn" href="fonts/full-ximosong-regular.woff2" download>下载网页字体 (WOFF2)</a>
+          <a class="btn ghost" href="OFL.txt" target="_blank" rel="noopener">阅读 OFL 1.1 全文</a>
+          <p class="quiet">桌面 OTF 四字重见本仓库的 Releases 页面。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>上游致谢</h4>
+        <p>Source Han Serif CN（思源宋体）© 2017–2024 Adobe，SIL OFL 1.1。</p>
+        <p>姊妹字体 <a href="https://okko10086.github.io/ximohei/">戏墨黑 SC</a>（基于思源黑体）。</p>
+      </div>
+      <div>
+        <h4>诚实说明</h4>
+        <p>本字体是思源宋体的衍生作品，依 OFL 第 5 条整体以 OFL 1.1 发布，
+          因此<b>不主张独占商用</b>，也不能申请外观设计专利。
+          字形不是技术方案；可专利的是字体生产方法，与本文件的发布无关。</p>
+      </div>
+    </div>
+    <div class="foot-line">
+      <span><a href="https://okko10086.github.io/ximohei/">姊妹款：戏墨黑 SC →</a></span>
+      <span>戏墨宋 · 2026</span>
+      <span>SIL OFL 1.1</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
