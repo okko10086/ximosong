@@ -88,6 +88,11 @@ body { font-family: 'Xi Mo Song SC', serif; }
 - `fonts/full-ximosong-*.woff2` —— GB2312 完整子集（7,690 字符，约 2.5 MB），覆盖现代中文约 99.7%
 - `fonts/ximosongink-*.woff2` —— 水墨标题体自用子集（约 268 KB / 字重）
 
+## 使用须知（给使用者）
+
+**[`使用须知.md`](使用须知.md)** —— 能不能商用、要不要署名、收到质疑怎么办，
+一页说清。做设计前花两分钟看一眼，能省掉很多顾虑。
+
 ## 来源与版权
 
 仓库内每一类内容的来源、授权链与不含项，见 [NOTICE.md](NOTICE.md)。
