@@ -1,9 +1,5 @@
-Copyright (c) 2026 Xi Mo Hei Project, with Reserved Font Name 'Xi Mo Hei', 'Xi Mo Hei SC', '戏墨黑', '戏墨黑 SC'.
-Copyright (c) 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
-
-戏墨黑 SC (Xi Mo Hei SC) is a derivative work of Source Han Sans SC.
-本字体是思源黑体 SC 的衍生作品，依据 SIL Open Font License 1.1 发布。
-上游保留字体名 "Source" 未被使用；本衍生字体亦不得单独售卖。
+Copyright (c) 2026 Xi Mo Song Project, with Reserved Font Name 'Xi Mo Song', 'Xi Mo Song SC'.
+Copyright (c) 2017-2024 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
@@ -23,7 +19,7 @@ with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
 redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded,
+fonts, including any derivative works, can be bundled, embedded, 
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The
