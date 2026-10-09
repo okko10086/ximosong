@@ -1,14 +1,6 @@
 Copyright (c) 2026 Xi Mo Song Project,
-    with Reserved Font Name 'Xi Mo Song', 'Xi Mo Song SC'.
+    with Reserved Font Name 'Xi Mo Song', 'Xi Mo Song SC', '戏墨宋', '戏墨宋 SC'.
 Copyright (c) 2017-2024 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
-
-戏墨宋是思源字体的衍生作品，依 SIL Open Font License 1.1 发布。
-Ximo Song is a derivative work of Source Han Sans / Source Han Serif,
-released under the SIL Open Font License, Version 1.1.
-
-上游保留字体名 "Source" 未被使用。本字体亦不得单独售卖。
-The upstream Reserved Font Name "Source" is not used.
-This font may not be sold by itself.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
@@ -101,3 +93,21 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
+
+
+---
+
+### 关于本字体的说明 / Note on this font
+
+戏墨宋（Ximo Song）是 **Source Han Sans / Source Han Serif**（思源黑体 / 思源宋体）的衍生作品，
+依 SIL Open Font License 1.1 发布。构建脚本公开，只读入思源字体。
+
+戏墨宋（Ximo Song） is a derivative work of Adobe's **source-han-serif**, released under the
+SIL Open Font License 1.1. Build scripts are public and read only from
+Source Han fonts.
+
+- 上游保留字体名 `Source` 未被使用。The upstream Reserved Font Name "Source" is not used.
+- 本字体不得单独售卖。This font may not be sold by itself.
+- 用本字体做出的作品不受 OFL 约束，著作权归创作者。
+  Artwork created with this font is not subject to the OFL.
+- 使用说明见 `使用须知.md` / `NOTICE.md`。
